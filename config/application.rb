@@ -13,6 +13,3 @@ module Grammable
     # -- all .rb files in that directory are automatically loaded.
   end
 end
-
-# config/application.rb
-config.assets.initialize_on_precompile = false
