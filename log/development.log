@@ -299,3 +299,158 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 1441ms (Views: 1402.7ms | ActiveRecord: 17.9ms)
 
 
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-07-03 01:45:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (74.2ms)
+Completed 200 OK in 561ms (Views: 559.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5866445207947997295);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPictureToGram (20190706132853)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.5ms)[0m  [1m[35mALTER TABLE "grams" ADD "picture" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190706132853"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5866445207947997295)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/grams/new" for 10.0.2.2 at 2019-07-06 13:36:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GramsController#new as HTML
+Completed 401 Unauthorized in 55ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-06 13:36:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (430.4ms)
+Completed 200 OK in 2405ms (Views: 2379.5ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-07-06 13:36:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ZRbuNu6/rIaZpy49swQAldVFFXlzISUIEMk9EGxXqmfplUoybzo+ow8pGJ6AKvpEITFmr7NMkS24xjio/lh6w==", "user"=>{"email"=>"belladimambro@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "belladimambro@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 268ms (ActiveRecord: 4.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ZRbuNu6/rIaZpy49swQAldVFFXlzISUIEMk9EGxXqmfplUoybzo+ow8pGJ6AKvpEITFmr7NMkS24xjio/lh6w==", "user"=>{"email"=>"belladimambro@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (88.7ms)
+Completed 200 OK in 726ms (Views: 573.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-06 13:37:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (71.1ms)
+Completed 200 OK in 520ms (Views: 518.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-06 13:37:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (2.6ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  Rendered grams/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 731ms (Views: 567.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-07-06 13:37:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (78.9ms)
+Completed 200 OK in 471ms (Views: 469.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-07-06 13:37:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U2YT29v8fq+dZblEXx0Gs8gPTk1p5AfV7cP9AqLiT62bdl1+0fAGzINcHd5LDI5sn+VkeYdZbuWNOs0mimU5zQ==", "user"=>{"email"=>"fakeemail@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fakeemail@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "fakeemail@gmail.com"], ["encrypted_password", "$2a$11$tcYo1eCXi5I8Po3psuP85Oldm6vDbZW8/kZ0gUuHIHFPdI89iaQUO"], ["created_at", "2019-07-06 13:37:25.842149"], ["updated_at", "2019-07-06 13:37:25.842149"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3030/grams/new
+Completed 302 Found in 391ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/grams/new" for 10.0.2.2 at 2019-07-06 13:37:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering grams/new.html.erb within layouts/application
+  Rendered grams/new.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 506ms (Views: 467.7ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/grams" for 10.0.2.2 at 2019-07-06 13:37:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKWJNsr9gy2G7Fm2ASHZWMbrgCaxDRl3kxesaMthDgsul4em2PuVZRC2YWyN7WKzgTpR6eoMr6cFt5B+KSkxSQ==", "gram"=>{"message"=>"my new photo!", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fbb2044aee8 @tempfile=#<Tempfile:/tmp/RackMultipart20190706-24282-469wav.png>, @original_filename="Screen Shot 2019-07-05 at 7.05.43 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Screen Shot 2019-07-05 at 7.05.43 PM.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "my new photo!"], ["created_at", "2019-07-06 13:37:39.585010"], ["updated_at", "2019-07-06 13:37:39.585010"], ["user_id", 2], ["picture", "Screen_Shot_2019-07-05_at_7.05.43_PM.png"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3030/
+Completed 302 Found in 259ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-06 13:37:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  Rendered grams/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 476ms (Views: 453.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/grams/new" for 10.0.2.2 at 2019-07-06 13:50:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GramsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering grams/new.html.erb within layouts/application
+  Rendered grams/new.html.erb within layouts/application (424.7ms)
+Completed 200 OK in 2286ms (Views: 2107.7ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/grams" for 10.0.2.2 at 2019-07-06 13:50:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rU0kdKQ/7aVra5YSvks3KhjTD2KkM4ayl62Xb+ZGfXPDfyrktjn77f0xrsgyh4zBXwLerf8yMGIBDat5BA5CMQ==", "gram"=>{"message"=>"second gram!", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007f4d14f5f4e8 @tempfile=#<Tempfile:/tmp/RackMultipart20190706-24607-1gd86y6.png>, @original_filename="Screen Shot 2019-07-05 at 7.00.51 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"Screen Shot 2019-07-05 at 7.00.51 PM.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "second gram!"], ["created_at", "2019-07-06 13:50:29.592916"], ["updated_at", "2019-07-06 13:50:29.592916"], ["user_id", 2], ["picture", "Screen_Shot_2019-07-05_at_7.00.51_PM.png"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3030/
+Completed 302 Found in 786ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-06 13:50:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.5ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  Rendered grams/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 405ms (Views: 374.0ms | ActiveRecord: 1.3ms)
+
+
