@@ -10,6 +10,4 @@
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
-AWS_ACCESS_KEY: "AKIA4SGPZVYJOE63KP63"
-AWS_SECRET_KEY: "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"
-AWS_BUCKET: "2grammable"
+testing
