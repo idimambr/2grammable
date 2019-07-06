@@ -454,3 +454,77 @@ Processing by GramsController#index as HTML
 Completed 200 OK in 405ms (Views: 374.0ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/grams/new" for 10.0.2.2 at 2019-07-06 14:16:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering grams/new.html.erb within layouts/application
+  Rendered grams/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 577ms (Views: 532.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/grams" for 10.0.2.2 at 2019-07-06 14:16:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zv/EZKKynITKUgc41j0oFXspgpcLsnIsIGJdlZ6O3sagzcr0sLSKzFwIP+Ja8ZP+PPhTWFCzxPy2wmGDfMbhhA==", "gram"=>{"message"=>"testing carrierwave and figaro and fog", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007f4d48fd2518 @tempfile=#<Tempfile:/tmp/RackMultipart20190706-24607-avw0qo.jpg>, @original_filename="DSC_8105.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"DSC_8105.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "testing carrierwave and figaro and fog"], ["created_at", "2019-07-06 14:16:53.152998"], ["updated_at", "2019-07-06 14:16:53.152998"], ["user_id", 2], ["picture", "DSC_8105.jpg"]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 4248ms (ActiveRecord: 2.3ms)
+
+
+  
+Excon::Error::Socket (Connection reset by peer (Errno::ECONNRESET)):
+  
+app/controllers/grams_controller.rb:13:in `create'
+  Rendering /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/vagrant/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.4ms)
+Started GET "/" for 10.0.2.2 at 2019-07-06 14:17:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (1.1ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  Rendered grams/index.html.erb within layouts/application (36.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2291ms (Views: 2135.1ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/grams/new" for 10.0.2.2 at 2019-07-06 14:18:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering grams/new.html.erb within layouts/application
+  Rendered grams/new.html.erb within layouts/application (544.9ms)
+Completed 200 OK in 1145ms (Views: 1054.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/grams" for 10.0.2.2 at 2019-07-06 14:18:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eSDYFbJE32AEUScTnvIMSrSaW1Q16XvLmgyLPccxbzwXEtaFoELJKJILH8kSPreh80uKm27ozRsMrLcrJXlQfg==", "gram"=>{"message"=>"carrierwave figaro fog", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fb3dcd0f498 @tempfile=#<Tempfile:/tmp/RackMultipart20190706-25159-1xqp3mk.jpg>, @original_filename="DSC_8105.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"gram[picture]\"; filename=\"DSC_8105.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Post!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "grams" ("message", "created_at", "updated_at", "user_id", "picture") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["message", "carrierwave figaro fog"], ["created_at", "2019-07-06 14:18:17.600164"], ["updated_at", "2019-07-06 14:18:17.600164"], ["user_id", 2], ["picture", "DSC_8105.jpg"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3030/
+Completed 302 Found in 5770ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-06 14:18:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GramsController#index as HTML
+  Rendering grams/index.html.erb within layouts/application
+  [1m[36mGram Load (0.4ms)[0m  [1m[34mSELECT "grams".* FROM "grams"[0m
+  Rendered grams/index.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 553ms (Views: 512.9ms | ActiveRecord: 1.2ms)
+
+

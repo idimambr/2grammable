@@ -45,36 +45,36 @@ end
   expect(response).to have_http_status(:forbidden)
 end
 
-   it "shouldn't let unauthenticated users update a gram" do
+    it "shouldn't let unauthenticated users update a gram" do
       gram = FactoryBot.create(:gram)
       patch :update, params: { id: gram.id, gram: { message: "Hello" } }
       expect(response).to redirect_to new_user_session_path
     end
 
     it "should allow users to successfully update grams" do
- gram = FactoryBot.create(:gram, message: "Initial Value")
-  sign_in gram.user
-  patch :update, params: { id: gram.id, gram: { message: 'Changed' } }
-  expect(response).to redirect_to root_path
-  gram.reload
-  expect(gram.message).to eq "Changed"
+      gram = FactoryBot.create(:gram, message: "Initial Value")
+      sign_in gram.user
+      patch :update, params: { id: gram.id, gram: { message: 'Changed' } }
+      expect(response).to redirect_to root_path
+      gram.reload
+      expect(gram.message).to eq "Changed"
     end
 
     it "should have http 404 error if the gram cannot be found" do
         user = FactoryBot.create(:user)
-  sign_in user
+        sign_in user
 
- patch :update, params: { id: "YOLOSWAG", gram: { message: 'Changed' } }
-  expect(response).to have_http_status(:not_found)
+        patch :update, params: { id: "YOLOSWAG", gram: { message: 'Changed' } }
+        expect(response).to have_http_status(:not_found)
     end
 
     it "should render the edit form with an http status of unprocessable_entity" do
-  gram = FactoryBot.create(:gram, message: "Initial Value")
-  sign_in gram.user
-  patch :update, params: { id: gram.id, gram: { message: '' } }
-  expect(response).to have_http_status(:unprocessable_entity)
-  gram.reload
-  expect(gram.message).to eq "Initial Value"
+       gram = FactoryBot.create(:gram, message: "Initial Value")
+        sign_in gram.user
+      patch :update, params: { id: gram.id, gram: { message: '' } }
+      expect(response).to have_http_status(:unprocessable_entity)
+      gram.reload
+      expect(gram.message).to eq "Initial Value"
     end
   end
 
